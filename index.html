@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Подготовка к Assignment 8: Chapter 18, вопросы, варианты ответов и простые объяснения Linux."><title>ОС / Chapter 18 — подготовка</title>
+<style>
+:root{--ink:#172d45;--blue:#1e65aa;--paper:#f4f7fa;--line:#d8e1e9;--good:#186b58;--bad:#9f3b3b}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 Arial,sans-serif}a{color:var(--blue)}button,input,select{font:inherit}button,a,input,select{outline-offset:4px}button{cursor:pointer;border:1px solid var(--line);background:white;color:var(--ink);border-radius:5px;padding:10px 17px}button:hover{border-color:var(--blue)}button.primary{background:var(--ink);color:white;border-color:var(--ink)}header{max-width:1180px;margin:auto;padding:26px 30px 0;display:flex;justify-content:space-between;align-items:center;gap:15px}.brand{font-weight:700}.brand code{font-size:20px;color:var(--blue)}nav{display:flex;gap:22px;font-size:14px}nav a{text-decoration:none}main{max-width:1180px;margin:auto;padding:50px 30px}h1{font:500 clamp(36px,5vw,62px)/1.08 Georgia,serif;letter-spacing:-1.5px;margin:8px 0 20px;max-width:800px}h2{font-size:25px;line-height:1.3}p{max-width:76ch} .intro{display:grid;grid-template-columns:1fr 280px;gap:50px;align-items:start;margin-bottom:40px}.intro p{margin:0 0 20px}.label{color:#516479;font-size:14px}.note{border-left:3px solid var(--blue);padding:12px 18px;font-size:14px;background:#e9f0f7}.note p{margin:5px 0}.toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}input[type=search],select{padding:11px;border:1px solid var(--line);border-radius:5px;color:var(--ink);background:white}input[type=search]{flex:1;min-width:180px}.status{font-size:14px;color:#516479;margin:14px 0 26px;min-height:22px}.question{display:grid;grid-template-columns:70px minmax(0,1fr);border-top:1px solid var(--line);padding:30px 0 35px;gap:18px}.num{font:32px Georgia,serif;color:#6c8194}.qbody{max-width:850px}.qbody h2{font-size:21px;margin:0 0 7px}.ru{color:#516479;margin:0 0 18px}.tag{font-size:13px;color:var(--blue);margin-bottom:9px}fieldset{border:0;padding:0;margin:0 0 18px;min-width:0}legend{font-size:13px;color:#516479;margin-bottom:8px}.option{display:flex;align-items:start;gap:12px;padding:12px 14px;border:1px solid var(--line);background:white;margin:8px 0;border-radius:4px;overflow-wrap:anywhere}.option input{margin:7px 0 0;accent-color:var(--blue);width:17px;height:17px;flex-shrink:0}.option b{display:block;font-weight:400}.why{font-size:14px;margin-top:5px;display:block}.correct{border-color:#7cae9f;background:#eff8f3}.wrong{border-color:#d9b6b6;background:#fff6f4}.mark{font-weight:700;font-size:13px}.correct .mark{color:var(--good)}.wrong .mark{color:var(--bad)}.explanation{padding:16px 20px;border-left:3px solid var(--blue);background:#e9f0f7;margin-top:16px;font-size:15px}.result{font-weight:700;margin-left:12px;font-size:14px}.command-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}article.command{min-width:0;overflow-wrap:anywhere;background:white;padding:22px;border:1px solid var(--line)}article h3{font-size:18px;margin-top:0}pre{background:#172d45;color:#eaf2fa;padding:16px;font:14px/1.7 monospace;overflow-x:auto;border-radius:4px}code{font-family:monospace}section#commands{margin-top:60px;padding-top:24px;border-top:2px solid var(--ink)}footer{margin-top:50px;font-size:13px;color:#516479;border-top:1px solid var(--line);padding-top:24px}.empty{padding:40px;text-align:center}.small{font-size:14px} .links{display:flex;gap:18px;flex-wrap:wrap}#reset{margin-left:auto} [hidden]{display:none!important}@media(max-width:760px){header{padding:20px}nav{gap:12px}main{padding:30px 20px}.intro{grid-template-columns:1fr;gap:15px}.question{grid-template-columns:32px minmax(0,1fr);gap:10px}.num{font-size:24px}.command-grid{grid-template-columns:1fr}h1{letter-spacing:-.5px}.toolbar>*{max-width:100%}#reset{margin-left:0}.result{display:block;margin:10px 0}.option{padding:10px}nav a:last-child{display:none}}@media print{header,nav,.toolbar,.status,.actions,.links{display:none!important}body{background:white;font-size:11pt}main{padding:0}.intro{display:block}.note{font-size:9pt}.question{break-inside:avoid;padding:15px 0;grid-template-columns:35px 1fr}.option{margin:4px 0;padding:5px}h1{font-size:28pt}.command-grid{display:block}article.command{break-inside:avoid;margin-bottom:12px}pre{white-space:pre-wrap;background:#eee;color:#111}.why{font-size:9pt}.explanation{font-size:10pt}footer{font-size:9pt}}
+</style></head><body>
+<header><span class="brand"><code>~/</code> Linux • ОС</span><nav><a href="#questions">Вопросы</a><a href="#commands">Команды</a><a href="#sources">Источники</a></nav></header>
+<main><div class="intro"><div><p class="label">Assignment 8 · Chapter 18 · Special directories and files</p><h1>Разобраться.<br>Запомнить. Ответить.</h1><p>Вопросы Exam 18 с вариантами ответов и объяснениями по-русски. Сначала попробуй ответить сам, затем открой разбор каждого варианта.</p><div class="links"><a href="#questions">Начать подготовку ↓</a><a href="#commands">Повторить команды ↓</a></div></div><aside class="note"><strong>Что входит</strong><p>10 вопросов из ранее проверенной попытки Exam 18 и команды для дополнительных заданий.</p><p>В LMS у Assignment 8 указаны Chapter 18, Exam 18 и Lab 18. Скрытый банк NetAcad и состав будущего экзамена недоступны; эти 10 вопросов не обозначают весь банк.</p></aside></div>
+<section id="questions" aria-label="Вопросы экзамена"><div class="toolbar"><input id="search" type="search" aria-label="Поиск по вопросам" placeholder="Найти: setgid, ссылки, /tmp…"><select id="topic" aria-label="Тема"><option value="">Все темы</option><option>Права</option><option>Ссылки</option><option>Каталоги</option></select><button id="all">Показать все ответы</button><button id="print">Печать</button><button id="reset">Сбросить</button></div><p id="status" class="status" aria-live="polite"></p><div id="list"></div></section>
+<section id="commands"><p class="label">Для практической части и защиты</p><h2>Команды, которые стоит уметь объяснить</h2><p class="small">Примеры выполняй в своей учебной Linux-машине. Вместо <code>user1</code> укажи своего пользователя. <code>sudo</code> запускает команду с правами администратора.</p><div class="command-grid">
+<article class="command"><h3>Скрытый файл</h3><pre>echo 'My note' > ~/.config_note
+ls ~
+ls -a ~
+cat ~/.config_note</pre><p class="small"><code>~</code> — домашняя папка. Точка в начале скрывает имя от обычного <code>ls</code>. <code>-a</code> показывает скрытые имена. <code>></code> создаёт или перезаписывает файл, <code>cat</code> читает его.</p></article>
+<article class="command"><h3>Жёсткая и символическая ссылки</h3><pre>mkdir -p ~/links_demo
+cd ~/links_demo
+echo 'Hello' > original.txt
+ln original.txt link_hard.txt
+ln -s original.txt link_sym.txt
+ls -li
+echo 'New text' >> original.txt
+cat link_hard.txt link_sym.txt
+rm original.txt
+cat link_hard.txt
+cat link_sym.txt</pre><p class="small"><code>ln цель имя</code> — жёсткая ссылка, <code>-s</code> — символическая. <code>-i</code> показывает inode: у original и hard он одинаковый. <code>>></code> дописывает текст. После удаления original hard работает, sym указывает на отсутствующий путь. В задании путь оригинала — <code>/home/user1/original.txt</code>.</p></article>
+<article class="command"><h3>Системные каталоги и типы файлов</h3><pre>ls -ld /dev /proc /tmp /var/log
+ls -l /dev
+ls -l /dev | grep '^b'
+ls -l /dev | grep '^c'</pre><p class="small"><code>/dev</code> — устройства; <code>/proc</code> — виртуальные сведения о процессах и ядре; <code>/tmp</code> — временные файлы; <code>/var/log</code> — журналы. <code>|</code> передаёт вывод дальше. <code>grep</code> фильтрует строки; <code>^</code> — начало строки. <code>b</code> — блочное устройство, <code>c</code> — символьное, <code>d</code> — каталог, <code>l</code> — ссылка, <code>-</code> — обычный файл.</p></article>
+<article class="command"><h3>Временная папка только для себя</h3><pre>mkdir -p /tmp/test_session
+touch /tmp/test_session/test.txt
+chmod 700 /tmp/test_session
+ls -ld /tmp/test_session</pre><p class="small"><code>mkdir</code> создаёт каталог, <code>-p</code> — также недостающих родителей. <code>touch</code> создаёт пустой файл или обновляет время. <code>700 = rwx------</code>: доступ только владельцу, кроме привилегированных процессов. <code>ls -ld</code> проверяет сам каталог.</p></article>
+<article class="command"><h3>Общая папка со sticky bit</h3><pre>sudo mkdir -p /home/shared_secure
+sudo chmod 1777 /home/shared_secure
+ls -ld /home/shared_secure</pre><p class="small">Ожидаемые права: <code>drwxrwxrwt</code>. Все могут создавать файлы, но удалять чужие записи мешает sticky bit. Владелец каталога и root — исключения. Другой способ включить: <code>sudo chmod +t /home/shared_secure</code>; убрать: <code>sudo chmod -t /home/shared_secure</code>.</p></article>
+<article class="command"><h3>Setgid и чтение прав</h3><pre>sudo chgrp projectgroup /home/shared_secure
+sudo chmod g+s /home/shared_secure
+ls -ld /home/shared_secure</pre><p class="small">Группа <code>projectgroup</code> должна существовать. <code>chgrp</code> меняет группу каталога. <code>g+s</code> включает setgid: новые файлы наследуют группу каталога. Убрать — <code>chmod g-s путь</code>. <code>u</code> — владелец, <code>g</code> — группа, <code>o</code> — остальные; <code>r=4</code>, <code>w=2</code>, <code>x=1</code>. Для каталога <code>x</code> позволяет проходить к содержимому.</p></article>
+</div><details><summary>Необязательная часть: очистка через cron</summary><p class="small">Если cron установлен и служба запущена, открой <code>crontab -e</code> и добавь строку ниже. Она каждый день в 03:00 удаляет только файлы <code>*.txt</code> из твоей папки test_session. Перед настройкой проверь путь. Это пример расписания, а не обязательная часть задания.</p><pre>0 3 * * * find /tmp/test_session -maxdepth 1 -type f -name '*.txt' -delete</pre><p class="small">Поля: минута, час, день месяца, месяц, день недели. Проверить расписание: <code>crontab -l</code>.</p></details></section>
+<footer id="sources"><p><strong>Материал для подготовки, 4 ноября 2026.</strong> Assignment 8 OS.pptx: Chapter 18, Exam 18, Lab 18 и шесть дополнительных заданий. Вопросы — из ранее проверенной попытки Chapter 18 (10/10); формулировки оформлены для чтения. Это учебная страница, не официальный банк Cisco/NDG.</p><p><a href="https://lms.astanait.edu.kz/mod/assign/view.php?id=93369">Задание в LMS</a> · <a href="https://www.netacad.com/launch?id=fb477d77-7adb-4d85-8db3-72f500f60315">Курс NetAcad</a> · <a href="https://www.gnu.org/software/coreutils/manual/html_node/Directory-Setuid-and-Setgid.html">GNU: setgid</a> · <a href="https://www.gnu.org/software/coreutils/manual/html_node/ln-invocation.html">GNU: ссылки</a></p></footer></main>
+<script>
+const data=[
+  {
+    "en": "Which of the following commands will set the sticky bit on /shared?",
+    "ru": "Какая команда устанавливает sticky bit для /shared?",
+    "topic": "Права",
+    "options": [
+      {
+        "text": "chmod 2777 /shared",
+        "correct": false,
+        "why": "2 — setgid, а sticky bit — 1."
+      },
+      {
+        "text": "chmod 1777 /shared",
+        "correct": true,
+        "why": "1 включает sticky bit; 777 даёт rwx всем."
+      },
+      {
+        "text": "chmod 4777 /shared",
+        "correct": false,
+        "why": "4 включает setuid."
+      },
+      {
+        "text": "chmod 6777 /shared",
+        "correct": false,
+        "why": "6 = 4 + 2: setuid и setgid, без sticky bit."
+      }
+    ],
+    "ex": "Sticky bit в общем каталоге ограничивает удаление и переименование записей: это может сделать владелец файла, владелец каталога или root. Он не запрещает запись в содержимое файла, если права её разрешают."
+  },
+  {
+    "en": "The setgid permission…",
+    "ru": "Что делает setgid? Выбери два ответа.",
+    "topic": "Права",
+    "options": [
+      {
+        "text": "allows files created in a directory to be owned by the group that owns the directory.",
+        "correct": true,
+        "why": "Новые файлы наследуют группу каталога."
+      },
+      {
+        "text": "prevents the group owner of a file from being changed",
+        "correct": false,
+        "why": "Setgid не запрещает смену группы."
+      },
+      {
+        "text": "can only be set on files",
+        "correct": false,
+        "why": "Setgid бывает у файлов и каталогов."
+      },
+      {
+        "text": "allows a command to be run as the group owner of the file",
+        "correct": true,
+        "why": "У исполняемого файла используется эффективная группа владельца. Для обычных shell-скриптов Linux обычно игнорирует этот бит."
+      }
+    ],
+    "ex": "На каталоге setgid означает наследование группы. На исполняемом файле — запуск с эффективным GID группы файла."
+  },
+  {
+    "en": "Which of the following commands will set the setgid permission on /shared?",
+    "ru": "Какой вариант устанавливает setgid для /shared?",
+    "topic": "Права",
+    "options": [
+      {
+        "text": "chmod 7777 /shared",
+        "correct": false,
+        "why": "Технически тоже включает setgid, но вместе с setuid и sticky bit. В этой попытке ожидается 2777."
+      },
+      {
+        "text": "chmod 4777 /shared",
+        "correct": false,
+        "why": "4 — setuid."
+      },
+      {
+        "text": "None of these options are correct",
+        "correct": false,
+        "why": "Подходит 2777."
+      },
+      {
+        "text": "chmod 2777 /shared",
+        "correct": true,
+        "why": "2 — setgid."
+      },
+      {
+        "text": "chmod 1777 /shared",
+        "correct": false,
+        "why": "1 — sticky bit."
+      }
+    ],
+    "ex": "Запомни: 4 = setuid, 2 = setgid, 1 = sticky bit. Вопрос сформулирован неоднозначно: 7777 также содержит setgid, но добавляет другие специальные биты."
+  },
+  {
+    "en": "Which of the following long listings indicates that the setgid permission has been set on /shared?",
+    "ru": "В какой строке показан setgid у /shared?",
+    "topic": "Права",
+    "options": [
+      {
+        "text": "drwxrwsrwx. 12 root group 4096 Oct 21 13:12 /shared",
+        "correct": true,
+        "why": "s стоит на месте x группы."
+      },
+      {
+        "text": "drwSrwxrwx. 12 root group 4096 Oct 21 13:12 /shared",
+        "correct": false,
+        "why": "S в блоке владельца — setuid без x владельца."
+      },
+      {
+        "text": "drwxrwxrws. 12 root group 4096 Oct 21 13:12 /shared",
+        "correct": false,
+        "why": "Позиция специальных прав для остальных — sticky bit, там используют t/T. Это не корректная запись setgid."
+      },
+      {
+        "text": "drwsrwxrwx. 12 root group 4096 Oct 21 13:12 /shared",
+        "correct": false,
+        "why": "s в блоке владельца — setuid."
+      }
+    ],
+    "ex": "После d идут три блока: владелец rwx, группа rwx, остальные rwx. setgid виден как s/S в третьей позиции блока группы: s с выполнением, S без выполнения."
+  },
+  {
+    "en": "Setting setgid on a directory…",
+    "ru": "Что происходит при установке setgid на каталог?",
+    "topic": "Права",
+    "options": [
+      {
+        "text": "does nothing",
+        "correct": false,
+        "why": "Меняется наследование группы."
+      },
+      {
+        "text": "will allow scripts in the directory to be executed as the group owner of the directory",
+        "correct": false,
+        "why": "Setgid каталога не задаёт группу запуска скриптов."
+      },
+      {
+        "text": "is not allowed",
+        "correct": false,
+        "why": "Это разрешено."
+      },
+      {
+        "text": "will set the group owner of all files created in the directory to the group owner of the directory",
+        "correct": true,
+        "why": "Новые файлы получают группу каталога."
+      }
+    ],
+    "ex": "Setgid влияет на вновь созданные файлы; группу уже существующих файлов он сам по себе не изменяет."
+  },
+  {
+    "en": "A source file and a hard link must be on the same filesystem. True or False?",
+    "ru": "Исходный файл и жёсткая ссылка должны быть в одной файловой системе?",
+    "topic": "Ссылки",
+    "options": [
+      {
+        "text": "True",
+        "correct": true,
+        "why": "Оба имени указывают на один inode внутри одной файловой системы."
+      },
+      {
+        "text": "False",
+        "correct": false,
+        "why": "Жёсткая ссылка не пересекает границу файловых систем."
+      }
+    ],
+    "ex": "ln original.txt hard.txt создаёт ещё одно имя того же файла. При удалении исходного имени данные сохраняются, пока остаются другие жёсткие ссылки (или файл открыт процессом)."
+  },
+  {
+    "en": "Deleting a source file will break a symbolic link. True or False?",
+    "ru": "Если удалить исходный файл, символическая ссылка перестанет работать?",
+    "topic": "Ссылки",
+    "options": [
+      {
+        "text": "True",
+        "correct": true,
+        "why": "Путь назначения больше не существует — ссылка становится dangling, или «битой»."
+      },
+      {
+        "text": "False",
+        "correct": false,
+        "why": "Символическая ссылка не сохраняет содержимое исходного файла."
+      }
+    ],
+    "ex": "ln -s original.txt sym.txt хранит путь к цели. Если по этому пути снова создать файл, ссылка снова сможет его открыть."
+  },
+  {
+    "en": "A source file and a symbolic link must be on the same filesystem. True or False?",
+    "ru": "Символическая ссылка должна быть в той же файловой системе, что и цель?",
+    "topic": "Ссылки",
+    "options": [
+      {
+        "text": "True",
+        "correct": false,
+        "why": "Символическая ссылка может указывать на другой раздел."
+      },
+      {
+        "text": "False",
+        "correct": true,
+        "why": "Она хранит путь, а не общий inode."
+      }
+    ],
+    "ex": "Символическая ссылка может указывать на файл, каталог и даже пока несуществующий путь. Относительный путь считается от каталога самой ссылки."
+  },
+  {
+    "en": "Which of the following commands will display information about the directory itself rather than its contents?",
+    "ru": "Какие команды показывают сам каталог, а не его содержимое? Выбери два ответа.",
+    "topic": "Каталоги",
+    "options": [
+      {
+        "text": "ld -a",
+        "correct": false,
+        "why": "В варианте указано ld, а не ls. ld — компоновщик."
+      },
+      {
+        "text": "ls -h",
+        "correct": false,
+        "why": "-h задаёт удобные единицы размеров; не выбирает сам каталог."
+      },
+      {
+        "text": "ls -d",
+        "correct": true,
+        "why": "-d выводит сам каталог; по умолчанию это текущий каталог."
+      },
+      {
+        "text": "ls -ld",
+        "correct": true,
+        "why": "-l — подробный формат, -d — сведения о самом каталоге."
+      }
+    ],
+    "ex": "Пример: ls -ld /tmp показывает владельца и права /tmp. Команда ls -l /tmp показывает содержимое /tmp."
+  },
+  {
+    "en": "Which of the following directories typically allow any user to create temporary files?",
+    "ru": "В каких каталогах обычные пользователи обычно создают временные файлы? Выбери два ответа.",
+    "topic": "Каталоги",
+    "options": [
+      {
+        "text": "/home",
+        "correct": false,
+        "why": "Обычно пользователь пишет в своём домашнем каталоге, а не в самом /home."
+      },
+      {
+        "text": "/sbin",
+        "correct": false,
+        "why": "Системные программы; не каталог временных файлов."
+      },
+      {
+        "text": "/var/tmp",
+        "correct": true,
+        "why": "Временные файлы, обычно сохраняемые между перезагрузками."
+      },
+      {
+        "text": "/lost+found",
+        "correct": false,
+        "why": "Каталог восстановления файловой системы."
+      },
+      {
+        "text": "/tmp",
+        "correct": true,
+        "why": "Временные файлы; часто очищается при загрузке или по расписанию."
+      }
+    ],
+    "ex": "/tmp и /var/tmp обычно доступны для записи всем и имеют sticky bit. Срок хранения зависит от настроек системы."
+  }
+];
+const selected={}, revealed=new Set();
+const list=document.getElementById('list'),status=document.getElementById('status');
+const esc=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function score(i){return data[i].options.every((o,j)=>!!(selected[i]||[]).includes(j)===o.correct)}
+function render(){const text=document.getElementById('search').value.toLowerCase(),topic=document.getElementById('topic').value;let shown=0;list.innerHTML=data.map((q,i)=>{if((topic&&q.topic!==topic)||!JSON.stringify(q).toLowerCase().includes(text))return '';shown++;const open=revealed.has(i),multi=q.options.filter(o=>o.correct).length>1;return `<article class="question" id="q${i}"><div class="num">${String(i+1).padStart(2,'0')}</div><div class="qbody"><div class="tag">${q.topic}</div><h2>${esc(q.en)}</h2><p class="ru">${esc(q.ru)}</p><fieldset><legend>${multi?'Выбери два варианта':'Выбери один вариант'}</legend>${q.options.map((o,j)=>`<label class="option ${open?(o.correct?'correct':'wrong'):''}"><input type="${multi?'checkbox':'radio'}" name="q${i}" value="${j}" data-q="${i}" ${ (selected[i]||[]).includes(j)?'checked':''}><span><b>${esc(o.text)}</b>${open?`<span class="mark">${o.correct?'✓ Верный вариант':'✕ Неверный вариант'}</span><span class="why">${esc(o.why)}</span>`:''}</span></label>`).join('')}</fieldset><div class="actions"><button data-reveal="${i}">${open?'Скрыть разбор':'Проверить и показать разбор'}</button>${open?`<span class="result">${!(selected[i]||[]).length?'Ответы открыты':score(i)?'✓ Всё верно':'Есть ошибка — прочитай разбор'}</span>`:''}</div>${open?`<div class="explanation">${esc(q.ex)}</div>`:''}</div></article>`}).join('')||'<p class="empty">Ничего не найдено. Попробуй другое слово или выбери все темы.</p>';const answered=Object.keys(selected).filter(i=>selected[i].length);status.textContent=`Показано ${shown} из ${data.length} · Отвечено: ${answered.length} · Верно: ${answered.filter(i=>score(i)).length}`;document.getElementById('all').textContent=revealed.size===data.length?'Скрыть все ответы':'Показать все ответы'}
+list.addEventListener('change',e=>{if(!e.target.matches('input[data-q]'))return;const i=+e.target.dataset.q;selected[i]=[...document.querySelectorAll(`input[name="q${i}"]:checked`)].map(x=>+x.value);render()});
+list.addEventListener('click',e=>{const b=e.target.closest('[data-reveal]');if(!b)return;const i=+b.dataset.reveal;revealed.has(i)?revealed.delete(i):revealed.add(i);render()});
+document.getElementById('search').addEventListener('input',render);document.getElementById('topic').addEventListener('change',render);
+document.getElementById('all').onclick=()=>{if(revealed.size===data.length)revealed.clear();else data.forEach((q,i)=>revealed.add(i));render()};document.getElementById('reset').onclick=()=>{Object.keys(selected).forEach(k=>delete selected[k]);revealed.clear();document.getElementById('search').value='';document.getElementById('topic').value='';render()};document.getElementById('print').onclick=()=>{data.forEach((q,i)=>revealed.add(i));document.getElementById('search').value='';document.getElementById('topic').value='';render();window.print()};render();
+</script></body></html>
