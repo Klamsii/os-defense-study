@@ -16,4 +16,4 @@ Tradeoffs: long original English questions may take several lines on a phone; pr
 
 Font: Geist, SIL Open Font License. Licence at assets/OFL-Geist.txt.
 
-Final critique: the working question is the first large content block; the remaining count and progress derive from the same checked set. Three viewport widths preserve all content without page overflow. Command examples pair explanation and code on desktop and stack them on a phone. The Product Design installation was offered but was not confirmed; no external plugin output is claimed.
+Final critique: the working question is the first large content block; the remaining count and progress derive from the same checked set. Three viewport widths preserve all content without page overflow. Command examples pair explanation and code on desktop and stack them on a phone. Product Design was subsequently confirmed installed and used for a screenshot-based review of entering practice, checking an answer and advancing. That review identified keyboard focus remaining on the bottom navigation button after advancing. The next question heading now receives programmatic focus; its original wording and layout remain intact.
