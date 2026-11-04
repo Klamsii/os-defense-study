@@ -17,3 +17,9 @@ Tradeoffs: long original English questions may take several lines on a phone; pr
 Font: Geist, SIL Open Font License. Licence at assets/OFL-Geist.txt.
 
 Final critique: the working question is the first large content block; the remaining count and progress derive from the same checked set. Three viewport widths preserve all content without page overflow. Command examples pair explanation and code on desktop and stack them on a phone. Product Design was subsequently confirmed installed and used for a screenshot-based review of entering practice, checking an answer and advancing. That review identified keyboard focus remaining on the bottom navigation button after advancing. The next question heading now receives programmatic focus; its original wording and layout remain intact.
+
+## Chapter 17 addition
+
+The accepted Chapter 18 interface is retained. A chapter switch in the top bar opens Chapter 17 or 18; each chapter has its own dataset and local progress key. The shared study engine handles the Chapter 17 question with three correct options. Chapter 17 contains ten captured exam questions and 34 options, with twelve command-reference sections. The ownership/permissions assignment is grounded in Assignment 7 OS.pptx. The ambiguous GNU chmod option is labelled as ambiguous rather than simply incorrect.
+
+Checks: the recorded answer key, three-answer selection, all 34 explanations, ownership-topic filter, twelve command sections, independent chapter progress, local resource paths, JavaScript syntax and viewports 1440/768/390 were verified. No layout redesign was introduced.
